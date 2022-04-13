@@ -142,7 +142,7 @@ VIEW
   <div class="edit-btn">
 
 
-    <button data-easy-toggle="#win-1" data-easy-class="show" class="button-view"><img class="edit-icon" src="https://cdn-icons.flaticon.com/png/512/5881/premium/5881133.png?token=exp=1649242254~hmac=7f47e21f71569fd2d135fd071638c308" alt=""></a></button>
+    <button data-easy-toggle="#win-1" data-easy-class="show" class="button-view"><img class="edit-icon" src="https://cdn-icons.flaticon.com/png/512/5881/premium/5881133.png?token=exp=1649857215~hmac=6ee2ec203c27ff6aa9c5ab3ae620024b" alt=""></a></button>
   </div>
 
 
