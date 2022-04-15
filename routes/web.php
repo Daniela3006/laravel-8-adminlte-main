@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CountController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -22,9 +23,21 @@ Route::get('items', function () {
     return view('items');
 });
 
-Route::get('items', function () {
-    return view('items');
-});
+Route::get('page','CountController@index');
+
+Route:: get('products','productController@main')->name('product.main');
+
+Route:: get('about','AboutController@main')->name('about.main');
+
+Route:: get('contacts','ContactsController@main')->name('contact.main');
+
+Route::get('index','indexController@main')->name('index.main');
+
+
+
+
+
+
 
 Auth::routes();
 
