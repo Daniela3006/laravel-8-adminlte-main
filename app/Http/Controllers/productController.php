@@ -12,24 +12,54 @@ class productController extends Controller
 $products=Product::all();
 
 
-        return view('products', compact('products'));
+        return view('product.index', compact('products'));
     }
 
 
 public function create()
 {
-    product::create([
+return view('product.create');
 
-        'title'=>'maiou',
-        'description'=>'maiou pentru sport',
-        'price'=>'400',
-        'created_at'=>now(),
-        'updated_at'=>now(),
-    ]);
-
-    dd('created');
 }
 
+
+public function store()
+{
+    $data= request()->validate([
+        'title'=>'string',
+        'description'=>'string',
+        'price'=>'integer',
+    ]);
+   $product= Product:: create($data);
+   return redirect()->route('product.main');
+}
+
+
+
+public function show(Product $product)
+{
+
+return view('product.show',compact('product'));
+}
+
+
+public function edit(Product $product){
+    return view('product.edit', compact('product'));
+}
+
+public function update(Product $product){
+    $data= request()->validate([
+        'title'=>'string',
+        'description'=>'string',
+        'price'=>'integer',]);
+        $product->update($data);
+        return redirect()->route('product.show',$product->id);
+}
+public function destroy(Product $product)
+{
+$product-> delete();
+return redirect(route('product.main'));
+}
 
 
 

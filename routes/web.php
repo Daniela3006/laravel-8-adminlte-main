@@ -26,12 +26,22 @@ Route::get('items', function () {
 Route::get('page','CountController@index');
 
 Route:: get('products','productController@main')->name('product.main');
+Route:: get('products/create','productController@create')->name('create.main');
+Route:: post('products','productController@store')->name('product.store');
+Route:: get('products/{product}','productController@show')->name('product.show');
+Route:: get('products/{product}/edit','productController@edit')->name('product.edit');
+Route:: patch('products/{product}','productController@update')->name('product.update');
+Route:: delete('products/{product}','productController@destroy')->name('product.delete');
+
+
+
+
 
 Route:: get('about','AboutController@main')->name('about.main');
 
 Route:: get('contacts','ContactsController@main')->name('contact.main');
 
-Route::get('index','indexController@main')->name('index.main');
+
 
 
 
