@@ -6,7 +6,6 @@
 
         <a href="{{route('create.main')}}" class="btn btn-primary mb-3">Add new product</a>
     </div>
-    @foreach($products as $product)
 
 
 
@@ -25,7 +24,10 @@
 
             </tr>
         </thead>
+
+
         <tbody>
+            @foreach($products as $product)
             <tr>
                 <th scope="row">{{$product->id}}</th>
                 <td>{{$product->title}}</td>
@@ -50,20 +52,13 @@
                 </td>
 
             </tr>
-            <tr>
+            @endforeach
 
-
-
-            </tr>
-            <tr>
-
-
-
-            </tr>
         </tbody>
     </table>
 
-    @endforeach
+
+
 </div>
 
 
